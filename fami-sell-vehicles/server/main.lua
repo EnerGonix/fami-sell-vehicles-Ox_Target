@@ -128,6 +128,9 @@ AddEventHandler('fami-sell-vehicles:buyVehicle', function (index)
             TriggerClientEvent('fami-sell-vehicles:removedVehicle', -1, index)
 
             xPlayer.showNotification(locale('vehicle_bought', price))
+
+            -- 🔹 Reinicia os veículos no client após compra
+            TriggerClientEvent('fami-sell-vehicles:resetCars', -1)
         else
             xPlayer.showNotification(locale('not_enough_money'))
         end
@@ -173,6 +176,9 @@ AddEventHandler('fami-sell-vehicles:returnVehicle', function (index)
         TriggerClientEvent('fami-sell-vehicles:removedVehicle', -1, index)
 
         xPlayer.showNotification(locale('vehicle_returned'))
+
+        -- 🔹 Reinicia os veículos no client após return
+        TriggerClientEvent('fami-sell-vehicles:resetCars', -1)
     end
 end)
 
