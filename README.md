@@ -6,7 +6,7 @@ A script for FiveM that is meant to replace the old [esx-qalle-sellvehicles](htt
 - ESX (No QB support)
 - OxLib
 - OxMySQL
-- -Ox_Target
+- Ox_Target
 
 ### Known issues
 None so far :)
